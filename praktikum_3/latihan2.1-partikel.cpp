@@ -2,7 +2,7 @@
 
 class Partikel
 {
-private:
+public:
     // Atribut terkunci (tidak bisa diakses langsung dari main)
     double posisi_x, posisi_y;
 
@@ -35,5 +35,6 @@ int main()
     p1.bergerak(2.5, 3.0);
     p1.tampilkanPosisi();
 
+    p1.posisi_x = 100.0;
     return 0;
 }
