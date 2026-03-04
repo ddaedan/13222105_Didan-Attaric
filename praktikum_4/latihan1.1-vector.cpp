@@ -11,7 +11,8 @@ int main()
     kumpulan_angka.push_back(25);
     kumpulan_angka.push_back(50);
 
-    kumpulan_angka.pop_back();
+    // kumpulan_angka.pop_back();
+    // kumpulan_angka.clear();
 
     // .size() akan otomatis bernilai 3
     for (int i = 0; i < kumpulan_angka.size(); i++)

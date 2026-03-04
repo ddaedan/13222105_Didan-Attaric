@@ -26,10 +26,10 @@ int main()
         int temp_sensor_vector_size = sensor.size();
         for (int i = 0; i < temp_sensor_vector_size; i++)
         {
-            file_hasil_kalibrasi << "Nilai sensor " << i + 1 << " | "
-                                 << sensor[i] << "\n";
+            file_hasil_kalibrasi << sensor[i] << "\n";
         }
         std::cout << "File hasil kalibrasi berhasil berhasil ditulis." << std::endl;
+        file_hasil_kalibrasi.close();
     }
     else
     {

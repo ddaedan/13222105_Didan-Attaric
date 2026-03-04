@@ -22,17 +22,20 @@ public:
     // Fungsi hitung jarak
     void hitungJarak()
     {
-        // jarak_pusat = std::sqrt((x * x) + (y * y));
-        double x_temp = x - 5.0;
-        double y_temp = y - 5.0;
-        jarak_pusat = std::sqrt((x_temp * x_temp) + (y_temp * y_temp));
+        // Uncomment bagian ini untuk membuat titik (5.0, 5.0) sebagai acuan
+        // double x_temp = x - 5.0;
+        // double y_temp = y - 5.0;
+        // jarak_pusat = std::sqrt((x_temp * x_temp) + (y_temp * y_temp));
+
+        // Comment bagian ini untuk membuat titik (5.0, 5.0) sebagai acuan
+        jarak_pusat = std::sqrt((x * x) + (y * y));
     }
 
     // Dua tipe koordinat yang bisa dibaca:
     // koordinat x  = {0}
     // koordinat y  = {1}
     // nilai 0      = default
-    double tampilkanPosisi(int tipe_koordinar)
+    double berikanPosisi(int tipe_koordinar)
     {
         switch (tipe_koordinar)
         {
@@ -45,7 +48,7 @@ public:
         }
     }
 
-    double tampilkanJarakPusat()
+    double berikanJarakPusat()
     {
         return jarak_pusat;
     }
@@ -91,8 +94,8 @@ int main()
         for (int i = 0; i < kumpulan_partikel.size(); i++)
         {
             fileHasil << "Partikel " << i + 1
-                      << " | Posisi: (" << kumpulan_partikel[i].tampilkanPosisi(0) << ", " << kumpulan_partikel[i].tampilkanPosisi(1) << ") "
-                      << "| Jarak: " << kumpulan_partikel[i].tampilkanJarakPusat() << "\n";
+                      << " | Posisi: (" << kumpulan_partikel[i].berikanPosisi(0) << ", " << kumpulan_partikel[i].berikanPosisi(1) << ") "
+                      << "| Jarak: " << kumpulan_partikel[i].berikanJarakPusat() << "\n";
         }
         fileHasil.close();
         std::cout << "=> Selesai! Buka file 'hasil_jarak.txt' untuk melihat kalkulasinya." << std::endl;
